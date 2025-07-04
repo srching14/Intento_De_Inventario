@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Metadata for SEO and author information -->
+  <!-- Metadata -->
   <meta charset="UTF-8" />
   <meta name="description" content="Interactive inventory page"/>
   <meta name="keywords" content="management, inventory" />
   <meta name="author" content="Elias Ching Torres" />
   <meta name="copyright" content="&copy; Elias Ching 2025"/>
   <title>Inventory</title>
-  <!-- Link to CSS and SweetAlert2 -->
+  <!-- Styles and SweetAlert2 -->
   <link rel="stylesheet" href="./src/css/style.css" />
   <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header section -->
+  <!-- Header -->
   <header>
     <h1>Product Inventory</h1>
   </header>
 
   <!-- Main content -->
   <main>
-    <!-- Form section for adding/editing products -->
+    <!-- Form section -->
     <section class="form-section">
       <h2>Add / Edit</h2>
       <form id="productForm">
-        <!-- Input fields for product details -->
+        <!-- Input fields -->
         <input type="text" id="productName" placeholder="Name" required />
         <input type="number" id="productPrice" placeholder="Price" required />
         <input type="text" id="productCategory" placeholder="Category" required />
@@ -32,14 +32,14 @@
       </form>
     </section>
     <br>  
-    <!-- Product list section -->
+    <!-- Product list -->
     <section class="list-section">
       <h2>Product List</h2>
       <div id="productList"></div>
     </section>
   </main> 
 
-  <!-- Footer section -->
+  <!-- Footer -->
   <footer>
     <p>&copy;Elias Ching Torres</p>
   </footer>
