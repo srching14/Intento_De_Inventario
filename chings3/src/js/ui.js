@@ -4,6 +4,7 @@ import { setEditMode } from './form.js';
 
 const productList = document.getElementById('productList');
 
+// Render the product list dynamically
 export async function renderProducts() {
   try {
     const products = await getProducts();
@@ -33,6 +34,7 @@ export async function renderProducts() {
   }
 }
 
+// Set up event listeners for edit and delete buttons
 function setupEventListeners() {
   document.querySelectorAll('.edit-btn').forEach(btn => {
     btn.addEventListener('click', handleEdit);
@@ -43,6 +45,7 @@ function setupEventListeners() {
   });
 }
 
+// Handle the edit button click
 function handleEdit(event) {
   const productElement = event.target.closest('.product');
   const product = {
@@ -54,6 +57,7 @@ function handleEdit(event) {
   setEditMode(product);
 }
 
+// Handle the delete button click
 async function handleDelete(event) {
   const productId = event.target.closest('.product').dataset.id;
   const confirm = await showConfirmation(

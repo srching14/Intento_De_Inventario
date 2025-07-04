@@ -10,10 +10,12 @@ const categoryInput = document.getElementById('productCategory');
 let editMode = false;
 let currentProductId = null;
 
+// Initialize form handling
 export function initFormHandler() {
   form.addEventListener('submit', handleSubmit);
 }
 
+// Switch to edit mode
 export function setEditMode(product) {
   editMode = true;
   currentProductId = product.id;
@@ -23,6 +25,7 @@ export function setEditMode(product) {
   form.querySelector('button[type="submit"]').textContent = 'Update';
 }
 
+// Handle form submission
 async function handleSubmit(e) {
   e.preventDefault();
 
@@ -55,6 +58,7 @@ async function handleSubmit(e) {
   }
 }
 
+// Validate product data
 function validateProduct(product) {
   if (!product.name || isNaN(product.price)) {
     showErrorAlert('Espera...', 'Todos los campos son obligatorios.');
@@ -69,6 +73,7 @@ function validateProduct(product) {
   return true;
 }
 
+// Reset the form
 function resetForm() {
   form.reset();
   editMode = false;

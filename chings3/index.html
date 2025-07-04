@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Metadata -->
   <meta charset="UTF-8" />
-  <meta name="description" content="Pagina intercativa de inventario"/>
-  <meta name="keywords" content="gestion, inventory" />
+  <meta name="description" content="Interactive inventory page"/>
+  <meta name="keywords" content="management, inventory" />
   <meta name="author" content="Elias Ching Torres" />
   <meta name="copyright" content="&copy; Elias Ching 2025"/>
-  <title>Inventario</title>
+  <title>Inventory</title>
+  <!-- Styles and SweetAlert2 -->
   <link rel="stylesheet" href="./src/css/style.css" />
   <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Inventario Productos</h1>
+    <h1>Product Inventory</h1>
   </header>
 
+  <!-- Main content -->
   <main>
+    <!-- Form section -->
     <section class="form-section">
-      <h2>Agregar / Editar</h2>
+      <h2>Add / Edit</h2>
       <form id="productForm">
+        <!-- Input fields -->
         <input type="text" id="productName" placeholder="Name" required />
         <input type="number" id="productPrice" placeholder="Price" required />
         <input type="text" id="productCategory" placeholder="Category" required />
@@ -26,16 +32,19 @@
       </form>
     </section>
     <br>  
+    <!-- Product list -->
     <section class="list-section">
-      <h2>Lista De Productos</h2>
+      <h2>Product List</h2>
       <div id="productList"></div>
     </section>
   </main> 
 
+  <!-- Footer -->
   <footer>
     <p>&copy;Elias Ching Torres</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="module" src="./src/js/main.js"></script>
 </body>

@@ -1,5 +1,6 @@
 const API_URL = 'http://localhost:3000/productos';
 
+// Fetch all products from the API
 export async function getProducts() {
   try {
     const response = await fetch(API_URL);
@@ -10,6 +11,7 @@ export async function getProducts() {
   }
 }
 
+// Create a new product in the API
 export async function createProduct(product) {
   try {
     const response = await fetch(API_URL, {
@@ -24,6 +26,7 @@ export async function createProduct(product) {
   }
 }
 
+// Update an existing product by ID
 export async function updateProduct(id, product) {
   try {
     const response = await fetch(`${API_URL}/${id}`, {
@@ -38,6 +41,7 @@ export async function updateProduct(id, product) {
   }
 }
 
+// Delete a product by ID
 export async function deleteProduct(id) {
   try {
     const response = await fetch(`${API_URL}/${id}`, {
@@ -50,6 +54,7 @@ export async function deleteProduct(id) {
   }
 }
 
+// Check for duplicate product names, optionally excluding a specific ID
 export async function checkDuplicateName(name, excludeId = null) {
   const products = await getProducts();
   return products.some(
