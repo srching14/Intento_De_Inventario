@@ -1,10 +1,22 @@
 {
-    "productos": [
-      {
-        "id": "3815",
-        "name": "celular",
-        "price": 2500,
-        "category": "tecnologia"
-      }
-    ]
-  }
+  "productos": [
+    {
+      "name": "Televisor",
+      "price": 5000,
+      "category": "tecnologia",
+      "id": "27cb"
+    },
+    {
+      "id": "45e8",
+      "name": "celular",
+      "price": 2500,
+      "category": "tecnologia"
+    },
+    {
+      "id": "ef70",
+      "name": "ti",
+      "price": 2500,
+      "category": "tecnologia"
+    }
+  ]
+}

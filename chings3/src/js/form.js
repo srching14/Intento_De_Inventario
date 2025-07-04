@@ -36,33 +36,33 @@ async function handleSubmit(e) {
 
   try {
     if (await checkDuplicateName(product.name, editMode ? currentProductId : null)) {
-      showErrorAlert('Duplicate', 'Product name already exists.');
+      showErrorAlert('Espera!', 'Este pruducto ya exisiste.');
       return;
     }
 
     if (editMode) {
       await updateProduct(currentProductId, product);
-      showSuccessAlert('Updated!', 'Product updated successfully.');
+      showSuccessAlert('Actualizado!', 'El producto se actualizo correctamente.');
     } else {
       await createProduct(product);
-      showSuccessAlert('Saved!', 'Product added successfully.');
+      showSuccessAlert('Guardado!', 'El producto se guardo correctamente.');
     }
 
     resetForm();
     await renderProducts();
   } catch (error) {
-    showErrorAlert('Error', 'Operation failed.');
+    showErrorAlert('Error', 'Operación fallida.');
   }
 }
 
 function validateProduct(product) {
   if (!product.name || isNaN(product.price)) {
-    showErrorAlert('Oops...', 'All fields are required.');
+    showErrorAlert('Espera...', 'Todos los campos son obligatorios.');
     return false;
   }
 
   if (product.price < 0) {
-    showErrorAlert('Oops...', 'Price cannot be negative.');
+    showErrorAlert('IEy ey ey...', 'El precio es negativo.');
     return false;
   }
 
