@@ -17,6 +17,12 @@
       "name": "ti",
       "price": 2500,
       "category": "tecnologia"
+    },
+    {
+      "id": "6bc1",
+      "name": "Teleclable",
+      "price": 2333,
+      "category": "198952"
     }
   ]
 }

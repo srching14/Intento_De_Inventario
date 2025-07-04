@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2';
 
+// Show a success alert
 export function showSuccessAlert(title, text) {
   return Swal.fire({
     title,
@@ -11,6 +12,7 @@ export function showSuccessAlert(title, text) {
   });
 }
 
+// Show an error alert
 export function showErrorAlert(title, text) {
   return Swal.fire({
     title,
@@ -22,6 +24,7 @@ export function showErrorAlert(title, text) {
   });
 }
 
+// Show a confirmation dialog and return the user's choice
 export async function showConfirmation(title, text) {
   const result = await Swal.fire({
     title,
