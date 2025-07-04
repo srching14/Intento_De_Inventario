@@ -1,0 +1,10 @@
+{
+    "productos": [
+      {
+        "id": "3815",
+        "name": "celular",
+        "price": 2500,
+        "category": "tecnologia"
+      }
+    ]
+  }

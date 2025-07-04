@@ -1,0 +1,311 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Importa esta fuente en tu HTML para el estilo futurista */
+  /* <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet"> */
+  
+  body {
+    background: linear-gradient(135deg, #0b0f29 0%, #020416 90%);
+    color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    text-shadow: 0 0 6px #ff6f00, 0 0 12px #ff6f00;
+  }
+  
+  /* HEADER */
+  header {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 3px solid #ff6f00;
+    box-shadow: 0 0 15px #ff6f00;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    color: #ff6f00;
+    user-select: none;
+    text-transform: uppercase;
+  }
+  
+  /* MAIN CONTAINER */
+  main {
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem auto;
+    background: #12192c;
+    border: 2px solid #ff6f00;
+    border-radius: 20px;
+    box-shadow:
+      0 0 15px #ff6f00,
+      inset 0 0 20px #ff6f00;
+    padding: 3rem 4rem;
+  }
+  
+  /* SECTION HEADINGS */
+  h2 {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #ff6f00;
+    border-bottom: 2px solid #ff6f00;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px #ff6f00, 0 0 15px #ff6f00;
+    user-select: none;
+  }
+  
+  /* FORM */
+  .form-section form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* INPUTS */
+  input[type="text"],
+  input[type="number"] {
+    flex-grow: 1;
+    min-width: 180px;
+    padding: 1rem 1.2rem;
+    border: 2px solid #ff6f00;
+    border-radius: 12px;
+    background: #0a0f22;
+    color: #ffb347;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    box-shadow:
+      0 0 6px #ff6f00,
+      inset 0 0 12px #ff6f00;
+    transition: all 0.3s ease;
+    outline-offset: 4px;
+  }
+  
+  input::placeholder {
+    color: #ffb347aa;
+    font-style: italic;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    border-color: #ffa500;
+    box-shadow:
+      0 0 10px #ffa500,
+      inset 0 0 20px #ffa500;
+    background-color: #1a1f3a;
+    color: #fff3bf;
+    outline: none;
+  }
+  
+  /* BUTTON */
+  button[type="submit"] {
+    background: linear-gradient(145deg, #ff6f00, #ffa500);
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 16px;
+    color: #1b1b1b;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow:
+      0 0 12px #ff6f00,
+      inset 0 0 10px #ffb347;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    background: linear-gradient(145deg, #ffa500, #ff6f00);
+    box-shadow:
+      0 0 20px #ffb347,
+      inset 0 0 18px #ffb347;
+    transform: scale(1.07);
+    outline: none;
+  }
+  
+  /* PRODUCT LIST */
+  .list-section #productList {
+    background: #0a0f22;
+    border: 2px solid #ff6f00;
+    border-radius: 16px;
+    padding: 1.8rem 2.2rem;
+    box-shadow:
+      inset 0 0 15px #ff6f00;
+    min-height: 200px;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    color: #ffb347;
+    line-height: 1.5;
+  }
+  
+  /* PRODUCT ITEMS */
+  .product-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ff8f2c;
+    user-select: text;
+    text-shadow: 0 0 3px #ff8f2c;
+  }
+  
+  .product-item:last-child {
+    border-bottom: none;
+  }
+  
+  .product-name {
+    font-weight: 700;
+    color: #ff6f00;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  
+  .product-category {
+    font-style: italic;
+    color: #ffa93d;
+    margin-left: 1.2rem;
+    font-size: 1rem;
+    opacity: 0.9;
+    white-space: nowrap;
+  }
+  
+  .product-price {
+    font-weight: 700;
+    color: #ff9f1a;
+    min-width: 80px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    text-shadow: 0 0 4px #ff9f1a;
+  }
+  
+  /* FOOTER */
+  footer {
+    background: #12192c;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 3px solid #ff6f00;
+    font-family: 'Orbitron', monospace;
+    color: #ff6f00;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    box-shadow: 0 -4px 15px #ff6f00;
+    user-select: none;
+    border-radius: 16px 16px 0 0;
+    margin-top: auto;
+  }
+   /* BOTONES EDITAR Y ELIMINAR */
+   button.edit-btn,
+   button.delete-btn {
+     border: none;
+     padding: 0.45rem 1rem;
+     margin-left: 0.8rem;
+     border-radius: 12px;
+     font-family: 'Orbitron', monospace;
+     font-weight: 700;
+     font-size: 0.95rem;
+     cursor: pointer;
+     box-shadow: 0 0 10px #ff6f00, inset 0 0 6px #ff6f00;
+     transition: all 0.3s ease;
+     user-select: none;
+     text-transform: uppercase;
+     text-shadow: 0 0 4px #ff6f00;
+   }
+   
+   /* Botón editar: azul neón */
+   button.edit-btn {
+     background: linear-gradient(145deg, #1a73e8, #1762d6);
+     color: #b0d4ff;
+     box-shadow:
+       0 0 12px #1a73e8,
+       inset 0 0 10px #5097ff;
+   }
+   
+   button.edit-btn:hover,
+   button.edit-btn:focus {
+     background: linear-gradient(145deg, #5097ff, #1a73e8);
+     box-shadow:
+       0 0 20px #7bb0ff,
+       inset 0 0 18px #7bb0ff;  
+     transform: scale(1.1);
+     outline: none;
+   }
+   
+   /* Botón eliminar: rojo neón */
+   button.delete-btn {
+     background: linear-gradient(145deg, #e83939, #d62c2c);
+     color: #ffb3b3;
+     box-shadow:
+       0 0 12px #e83939,
+       inset 0 0 10px #ff5151;
+   }
+   
+   button.delete-btn:hover,
+   button.delete-btn:focus {
+     background: linear-gradient(145deg, #ff5151, #e83939);
+     box-shadow:
+       0 0 20px #ff6f6f,
+       inset 0 0 18px #ff6f6f;
+     transform: scale(1.1);
+     outline: none;
+   }
+   
+  /* RESPONSIVE */
+  @media (max-width: 720px) {
+    main {
+      padding: 2rem 2rem;
+    }
+    
+    form {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+    }
+  
+    button[type="submit"] {
+      width: 100%;
+      padding: 1.1rem;
+      font-size: 1.3rem;
+    }
+  
+    .product-item {
+      flex-direction: column;
+      gap: 0.4rem;
+      text-align: left;
+    }
+  
+    .product-price {
+      text-align: left;
+      min-width: auto;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    header {
+      font-size: 2.2rem;
+      letter-spacing: 3px;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+ 
+  
